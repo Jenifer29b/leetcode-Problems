@@ -1,0 +1,9 @@
+.maincon {
+    background-color: white;
+    color: black;
+}
+
+.maincon.active {
+    background-color: black;
+    color: white;
+}
