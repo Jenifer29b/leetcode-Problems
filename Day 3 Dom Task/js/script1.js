@@ -16,6 +16,31 @@ btn.addEventListener("click", () => {
         li.remove()
     })
 
+    let update = document.createElement("button")
+    update.textContent = "Update"
+
+    update.addEventListener("click", () => {
+        let input = document.createElement("input")
+        input.type = "text"
+        input.value = item
+
+        let save = document.createElement("button")
+        save.textContent = "Save"
+        li.textContent = ""
+        li.append(input,save, remove)
+        
+        save.addEventListener("click", () => {
+            if (input.value.trim().length === 0) return;
+            li.textContent = input.value 
+        li.append(update,remove)
+        })
+        
+
+    })
+
+
+    
+    li.appendChild(update)
     li.appendChild(remove)
     document.getElementById("list").appendChild(li)
     document.getElementById("itemInput").value = ""
