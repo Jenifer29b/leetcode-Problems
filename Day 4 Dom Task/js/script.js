@@ -29,8 +29,13 @@ addbtn.addEventListener("click", () => {
         let save = document.createElement("button")
         save.textContent = "Save"
         li.textContent = "";
-        li.append(text,save)
+        li.append(text, save)
+        
 
+        save.addEventListener("click", () => {
+            li.textContent = text.value
+            li.append(update)
+})
         
 
         
